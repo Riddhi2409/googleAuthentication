@@ -32,7 +32,7 @@ passport.use(
         else {
             const newData=new user({
                     userId: profile.id,
-                    userName: profile.displayName,
+                    picture: profile._json.picture,
                     email:profile.emails[0].value
                 })
                 const data= await newData.save()
